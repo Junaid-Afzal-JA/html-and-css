@@ -1,0 +1,196 @@
+/* Applying on element */
+p{
+    color:red;
+}
+
+/* Applying with tag id */
+#p2{
+    color:rgb(139, 18, 187);
+}
+
+/* Applying on element Class*/
+.gray-text{
+color:gray;
+font-family:cursive;
+}
+
+/* Applying on element Class*/
+.underline{
+    text-decoration: underline;
+}
+
+#div1{
+    background-color:rgba(54, 54, 54, 0.438);
+    border-style: double solid dashed dotted;
+    animation-name: wave;
+    animation-duration: 100s;
+
+}
+
+#div1{
+    background-image:url('images/1.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* body{
+    background-color: rgb(123, 199, 218);
+} */
+
+/* body{
+    background-image:url('images/2.png');
+    background-position: center center; 
+    background-size:contain;
+    background-repeat: no-repeat;
+    animation-name: rotate;
+} */
+
+@keyframes bodyAnim {
+    0%   {background-color:rgba(163, 29, 96, 0.774)};
+    25%  {background-color:rgba(17, 31, 107, 0.959)};
+    50%  {background-color:rgba(87, 138, 6, 0.808)};
+    100% {background-color:rgba(104, 8, 67, 0.938)};
+  }
+
+
+  .wave {
+    float: left;
+    margin: 20px;
+    animation: wave  ease-in-out 0.5s infinite alternate;
+    transform-origin: center -36px;
+  }
+  
+  .wave:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  
+  .wave img {
+    border: 5px solid #f8f8f8;
+    display: block;
+    width: 200px;
+    height: 250px;
+  }
+  
+  .wave figcaption {
+    text-align: center;
+  }
+  
+  .wave:after{
+    content: '';
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    border: 1.5px solid #ffffff;
+    top: -10px; 
+    left: 50%;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(35deg);
+  }
+         
+  .wave:before{
+    content: '';
+    position: absolute;
+    top: -23px;
+    left: 50%;
+    display: block;
+    height: 44px;
+    width: 47px;
+    background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    z-index: 16;
+  }
+          
+  @keyframes wave {
+    0% { transform: rotate(10deg); }
+    10% { transform: rotate(-10deg); }
+    20% { transform: rotate(10deg); }
+    30% { transform: rotate(-10deg); }
+    40% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    60% { transform: rotate(10deg); }
+    70% { transform: rotate(-10deg); }
+    80% { transform: rotate(10deg); }
+    90% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
+  }
+
+  .rotate {
+    animation: rotation 2s;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  /* .linear {
+    animation-timing-function: linear;
+  }
+
+  .infinite {
+    animation-iteration-count: infinite;
+  }
+
+  .rotate-image {
+    animation: rotation 2s linear infinite;
+  } */
+
+  .rotate {
+    animation: rotation 8s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+
+  #loading {
+    -webkit-animation: rotation 30s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+
+.button{
+  display:inline-block;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color:#2d831b;
+  text-align:center;
+  transition: all 0.2s;
+  }
+  a.button3:hover{
+  background-color:#4095c6;
+  }
+  @media all and (max-width:30em){
+    a.button3{
+    display:block;
+    margin:0.2em auto;
+    }
+    }
